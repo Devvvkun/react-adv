@@ -1,4 +1,5 @@
 import ApiHandle_AsyncAwait from "./ApiHandle_AsyncAwait";
+import ApiHandle_viaAxios from "./ApiHandle_viaAxios";
 
 function App() {
   localStorage.setItem("Name", "Himanshu" )
@@ -19,10 +20,11 @@ function App() {
   // const jaankari = JSON.parse(localStorage.getItem("data"))
   // console.log(jaankari)
   return (
-    <>
- <h2>This is a black page</h2> 
- <ApiHandle_AsyncAwait />
-  </>
+//     <>
+//  <h2>This is a black page</h2> 
+//  <ApiHandle_AsyncAwait />
+//   </>
+<ApiHandle_viaAxios />
   )
 }
 
