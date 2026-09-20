@@ -8,6 +8,8 @@ import Footer from './Components/Footer'
 import Products from './Components/Products'
 import Men from './Components/Pages/Men'
 import Women from './Components/Pages/Women'
+import Courses from './Components/Pages/Courses'
+import CoursesDetail from './Components/Pages/CoursesDetail'
 const React_Router_DOM = () => {
   return (
     <div>
@@ -20,6 +22,8 @@ const React_Router_DOM = () => {
               <Route path='women' element={<Women />}/>
               <Route path='men' element={<Men />}/>
             </Route>
+               <Route path='/courses' element={<Courses />}></Route>
+               <Route path='/courses/:courseId' element={<CoursesDetail />}></Route>
             <Route path='*' element={<NotFound />}></Route>
         </Routes>
        <Footer/> 
