@@ -1,7 +1,7 @@
 import About from './Components/About'
 import Home from './Components/Home'
 import Contact from './Components/Contact'
-import {Routes , Route} from 'react-router-dom'
+import {Routes , Route, useLocation} from 'react-router-dom'
 import Navbar from './Navbar'
 import NotFound from './Components/NotFound'
 import Footer from './Components/Footer'
@@ -10,10 +10,13 @@ import Men from './Components/Pages/Men'
 import Women from './Components/Pages/Women'
 import Courses from './Components/Pages/Courses'
 import CoursesDetail from './Components/Pages/CoursesDetail'
+import HomeBtn from './Components/HomeBtn'
 const React_Router_DOM = () => {
+  const location = useLocation();
   return (
-    <div>
+    <div className='h-screen'>
       <Navbar />
+      {location.pathname !== '/' && <HomeBtn />}
         <Routes>
             <Route path='/' element={<Home />}></Route>
             <Route path='/about' element={<About />}></Route>
