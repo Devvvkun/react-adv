@@ -16,9 +16,10 @@ const React_Router_DOM = () => {
             <Route path='/' element={<Home />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/contact' element={<Contact />}></Route>
-            <Route path='/products' element={<Products />}></Route>
-            <Route path='/products/women' element={<Women />}></Route>
-            <Route path='/products/men' element={<Men />}></Route>
+            <Route path='/products' element={<Products />}>
+              <Route path='women' element={<Women />}/>
+              <Route path='men' element={<Men />}/>
+            </Route>
             <Route path='*' element={<NotFound />}></Route>
         </Routes>
        <Footer/> 
