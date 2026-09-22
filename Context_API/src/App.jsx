@@ -6,7 +6,10 @@ function App() {
 
   return (
    <>
-   <Navbar1 theme={theme}/>
+   <Navbar1 theme={theme}>
+    <h5>This is a children nav</h5>
+    <h5>We can pass it</h5>
+   </Navbar1>
    </>
   )
 }
