@@ -1,16 +1,16 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import Button from './Button'
 import Navbar1 from './Navbar1'
+import { ThemeContext } from './Theme'
 
 function App() {
-  const [theme, setTheme] = useState("Light")
+  const [,,body] = useContext(ThemeContext)
 
   return (
-   <>
-   <Navbar1 theme={theme}>
-    <h5>This is a children nav</h5>
-    <h5>We can pass it</h5>
-   </Navbar1>
-   </>
+   <div className={body}>
+  <Navbar1 />
+  <Button />
+   </div>
   )
 }
 

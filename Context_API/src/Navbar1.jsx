@@ -1,14 +1,14 @@
+import { useContext } from 'react'
 import Nav2 from './Nav2'
-
-const Navbar1 = (props) => {
+import { ThemeContext } from './Theme'
+const Navbar1 = () => {
+  const [theme] = useContext(ThemeContext)
   return (
-    <div className='gap-100 w-full bg-sky-500 text-white flex justify-around  items-center mx-4 absolute top-0'>
+    <div className={theme} >
         <div className='flex gap-8'>
             <h3>Navbar</h3>
-            {props.children[0]}
-            {props.children[1]}
         </div>
-        <Nav2 theme={props.theme}/>
+        <Nav2/>
     </div>
   )
 }
